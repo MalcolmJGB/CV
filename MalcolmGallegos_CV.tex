@@ -1,0 +1,214 @@
+% !TEX program = xelatex
+\documentclass[letterpaper]{article}
+
+\usepackage[letterpaper,left=0.70in,right=0.70in,top=0.513in,bottom=0.48in]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\IfFontExistsTF{Arial}{\setmainfont{Arial}}{\setmainfont{Liberation Sans}}
+
+\definecolor{linkblue}{RGB}{0,0,255}
+\definecolor{clientgray}{RGB}{80,80,80}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linkblue,
+  pdfauthor={Malcolm Josua Gallegos Bautista},
+  pdftitle={Malcolm Gallegos - Java Software Engineer - Base Resume},
+  pdfsubject={Reusable Java and backend resume with IBM client engagements grouped under IBM Consulting},
+  pdfkeywords={Java, Spring Boot, Microservices, Kafka, Kubernetes, CI/CD}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{0pt}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\raggedbottom
+
+\newlength{\profileindent}
+\newlength{\clientindent}
+\newlength{\skillindent}
+\newlength{\experienceindent}
+\newlength{\syntaxindent}
+\setlength{\profileindent}{14.2pt}
+\setlength{\clientindent}{28.35pt}
+\setlength{\skillindent}{32.05pt}
+\setlength{\experienceindent}{60.4pt}
+\setlength{\syntaxindent}{46.2pt}
+
+\newcommand{\sectiontitle}[1]{%
+  \vspace{6.5pt}%
+  {\fontsize{10}{11.5}\selectfont\bfseries #1\par}%
+  \vspace{1pt}\hrule height 0.8pt\vspace{8.8pt}%
+}
+
+\newcommand{\skillitem}[2]{%
+  {\fontsize{9}{10.35}\selectfont
+   \leftskip=\skillindent
+   \parindent=-17.85pt
+   \makebox[17.85pt][l]{\textbullet}\textbf{#1}#2\par}%
+  \vspace{1.4pt}%
+}
+
+\newcommand{\experienceitem}[1]{%
+  \vspace{-0.8pt}%
+  {\fontsize{8}{10.35}\selectfont
+   \leftskip=\experienceindent
+   \parindent=-17.85pt
+   \makebox[17.85pt][l]{\textbullet}#1\par}%
+  \vspace{1pt}%
+}
+
+% Los renglones de una sola línea conservan el punto adicional que Word agrega antes de la siguiente viñeta.
+\newcommand{\experienceitemsingle}[1]{%
+  \experienceitem{#1}\vspace{1pt}%
+}
+
+\newcommand{\syntaxitem}[1]{%
+  \vspace{-1.6pt}%
+  {\fontsize{8}{10.35}\selectfont
+   \leftskip=\syntaxindent
+   \parindent=-17.85pt
+   \makebox[17.85pt][l]{\textbullet}#1\par}%
+  \vspace{1.7pt}%
+}
+
+\newcommand{\certitem}[1]{%
+  {\fontsize{8}{10.35}\selectfont
+   \leftskip=\skillindent
+   \parindent=-17.85pt
+   \makebox[17.85pt][l]{\textbullet}#1\par}%
+  \vspace{1.3pt}%
+}
+
+\newcommand{\employerrow}[2]{%
+  {\fontsize{10}{11.5}\selectfont\bfseries
+   \hspace*{\profileindent}%
+   \makebox[491.7pt][l]{#1\hfill #2}\par}%
+}
+
+\newcommand{\clientrow}[2]{%
+  {\fontsize{9}{10.35}\selectfont
+   \hspace*{\clientindent}%
+   \makebox[455.2pt][l]{\textbf{#1}\hfill\textit{#2}}\par}%
+}
+
+\newcommand{\syntaxrow}[2]{%
+  {\fontsize{10}{11.5}\selectfont\bfseries
+   \hspace*{\profileindent}%
+   \makebox[478.1pt][l]{#1\hfill #2}\par}%
+}
+
+\begin{document}
+
+% Encabezado
+{\centering\fontsize{17}{19.55}\selectfont\bfseries
+ \leavevmode\lower3pt\hbox{MALCOLM JOSUA GALLEGOS BAUTISTA}\par}
+\vspace{8.7pt}
+{\centering\fontsize{10}{11.5}\selectfont\bfseries
+ JAVA SOFTWARE ENGINEER | SPRING BOOT | MICROSERVICES | DISTRIBUTED SYSTEMS\par}
+\vspace{2.9pt}
+{\centering\fontsize{9}{10.35}\selectfont
+ Mexico | +52 998 107 1417 | MalcolmJGB@hotmail.com | 
+ LinkedIn: \href{https://www.linkedin.com/in/malcolmjgb}{\underline{MalcolmJGB}} | 
+ GitHub: \href{https://github.com/MalcolmJGB}{\underline{MalcolmJGB}}\par}
+\vspace{1.6pt}
+{\centering\fontsize{9}{10.35}\selectfont
+ Spanish (Native) | English (B2 - Professional Working Proficiency) | German (Basic)\par}
+\vspace{2pt}
+
+\sectiontitle{PROFESSIONAL PROFILE}
+{\fontsize{9}{10.35}\selectfont
+ \leftskip=\profileindent
+ \rightskip=0pt
+ \noindent
+ Java Software Engineer with 6+ years of experience in technology, including 3+ years at IBM Consulting delivering Java/Spring\linebreak
+ Boot solutions through client engagements for enterprise banking and insurance platforms. Contributed across system design,\linebreak
+ development, modernization, automated testing, release coordination, and production support for 20+ microservices used by\linebreak
+ thousands of users. Experienced with REST and SOAP APIs, Kafka-based integrations, relational databases, Kubernetes,\linebreak
+ CI/CD, observability, performance analysis, and Java 8-to-17/21 upgrades. Reviews code, mentors less-experienced\linebreak
+ engineers, translates requirements into technical plans, and communicates delivery risks and solutions to technical and client\linebreak
+ stakeholders.\par}
+\vspace{0.6pt}
+
+\sectiontitle{CORE SKILLS}
+\skillitem{Programming: }{Java (8, 17, 21), C, SQL, Python}
+\skillitem{Backend \& Integration: }{Spring Boot, Microservices, REST APIs, SOAP, Apache Kafka, JPA, JDBC, Lombok}
+\skillitem{Architecture \& Reliability: }{System Design, Distributed Systems, Event-Driven Architecture, API Design, Performance\linebreak
+ Analysis, Production Troubleshooting, Root-Cause Analysis}
+\skillitem{Engineering Practices: }{Clean Code, Code Reviews, Unit \& Integration Testing, CI/CD, Release Management,\linebreak
+ Agile/Scrum}
+\skillitem{Data, Cloud \& Delivery: }{PostgreSQL, MySQL, AWS (basic working experience), Kubernetes, Docker, Podman,\linebreak
+ Jenkins, GitLab CI, Argo CD, Git}
+\skillitem{Observability \& Tools: }{Grafana, Prometheus, Dynatrace, SonarQube, Postman, SoapUI, Jira, Confluence}
+
+\sectiontitle{PROFESSIONAL EXPERIENCE}
+\vspace{0.3pt}
+\employerrow{IBM - Consulting | Software Engineer}{Sep 2022 - Mar 2026}
+\vspace{2pt}
+{\fontsize{8}{10.35}\selectfont\bfseries\color{clientgray}
+ \hspace*{21.25pt}CLIENT ENGAGEMENTS AT IBM | BANKING \& INSURANCE\par}
+\vspace{11.8pt}
+\clientrow{USAA | API Migration - Software Engineer}{Aug 2025 - Mar 2026}
+\experienceitem{Migrated and validated legacy APIs during a large-scale platform modernization, preserving functional behavior, integration\linebreak
+ contracts, and release readiness across dependent systems.}
+\experienceitem{Implemented backend services and migration logic in Java and Spring Boot, standardizing API error handling and response\linebreak
+ structures.}
+\experienceitemsingle{Created and maintained JUnit unit and integration tests to reduce regression risk during API cutover and release validation.}
+\experienceitem{Used Jenkins, GitLab CI, and Argo CD pipelines to build, deploy, and validate services; analyzed Kubernetes pod and\linebreak
+ application logs to resolve runtime issues blocking releases.}
+
+\vspace{10.7pt}
+\clientrow{Scotiabank | Business Banking Platform - Software Engineer}{Sep 2023 - May 2025}
+\experienceitem{Designed, developed, migrated, and maintained 20+ Java/Spring Boot microservices supporting business-banking workflows\linebreak
+ used by thousands of users within a four-developer Agile team.}
+\experienceitem{Contributed to system design and architecture improvements for services with performance and maintainability issues, helping\linebreak
+ reduce response times and simplify service interactions.}
+\experienceitem{Upgraded legacy services from Java 8 to Java 17/21, refactoring code while preserving production stability, compatibility, and\linebreak
+ release continuity.}
+\experienceitemsingle{Implemented synchronous and asynchronous integrations using REST APIs, SOAP services, and Apache Kafka.}
+\experienceitem{Performed root-cause analysis for production incidents using Grafana, Prometheus, and Dynatrace, supporting reliable\linebreak
+ resolution of critical service issues.}
+\experienceitem{Built and maintained JUnit unit and integration test suites, supporting automated validation and reducing regression risk across\linebreak
+ releases.}
+\experienceitem{Reviewed pull requests and mentored less-experienced developers on architecture decisions, clean code, maintainability, and\linebreak
+ team engineering standards.}
+\experienceitem{Translated requirements and user stories into technical tasks, estimates, and implementation approaches through refinement\linebreak
+ and sprint planning.}
+\experienceitem{Communicated progress, blockers, delivery risks, and proposed solutions to technical leads and client stakeholders while\linebreak
+ coordinating releases across Development, QA, and DevOps teams.}
+
+\vspace{9.7pt}
+\clientrow{USAA | Financials - Java Web Developer}{Sep 2022 - Sep 2023}
+\experienceitemsingle{Developed Java 8/Spring Boot microservices for insurance-related financial processes and enterprise workflows.}
+\experienceitemsingle{Produced and consumed Kafka events and built REST APIs integrated with event-driven processing flows.}
+\experienceitemsingle{Accessed and updated relational data using JPA and JDBC, supporting PostgreSQL and MySQL environments.}
+\experienceitem{Designed and maintained JUnit unit and integration tests and contributed to Agile planning, daily coordination, and delivery\linebreak
+ activities.}
+
+% Se conserva el mismo corte de página del documento de Word. La geometría
+% visual de la segunda página vuelve al margen superior nominal del DOCX.
+\newgeometry{left=0.70in,right=0.70in,top=0.48in,bottom=0.48in}
+
+\syntaxrow{\raisebox{1pt}{Syntax - Virtualization and Cloud Computing Engineer}}{\raisebox{1pt}{Jan 2020 - Sep 2022}}
+\syntaxitem{Provisioned and migrated virtual machines, installed VMware hypervisors, configured virtual networks, installed Windows/Linux\linebreak
+ operating systems, and managed partitions and storage.}
+\syntaxitem{Resolved high-priority infrastructure incidents through ServiceNow and served in secondary on-call coverage, strengthening\linebreak
+ operational discipline and production support skills.}
+
+\vspace{-1.7pt}
+\sectiontitle{EDUCATION}
+\vspace{0.2pt}
+\employerrow{Tecnologico de Monterrey - B.S. in Mechatronics Engineering}{\normalfont 2020}
+\vspace{0.3pt}
+{\fontsize{9}{10.35}\selectfont\hspace*{\profileindent}Mexico\par}
+\vspace{1pt}
+
+\vspace{-0.6pt}
+\sectiontitle{CERTIFICATIONS}
+\certitem{Microsoft Certified: Azure Fundamentals (2023)}
+\certitem{Cisco Unified Computing System - Introductory (2022)}
+
+\end{document}
