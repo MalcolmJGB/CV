@@ -1,7 +1,7 @@
 % !TEX program = xelatex
 \documentclass[letterpaper]{article}
 
-\usepackage[letterpaper, left = 0.60in, right = 0.60in, top = 0.6in, bottom = 0.6in]{geometry}
+\usepackage[left = 0.60in, right = 0.60in, top = 0.6in, bottom = 0.6in]{geometry}
 \usepackage{fontspec}
 \usepackage{xcolor}
 \usepackage{hyperref}
@@ -22,7 +22,6 @@
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\setlength{\emergencystretch}{0pt}
 \hyphenpenalty = 10000
 \exhyphenpenalty = 10000
 \raggedbottom
@@ -60,29 +59,28 @@
 
 \newcommand{\sectiontitle}[1]{
   \vspace{10pt}
-  {\fontsize{10}{\singlelinespacing} 
-    \selectfont 
-    \bfseries #1 \par}
+  {\fontsize{10}{\singlelinespacing} \selectfont 
+    \bfseries{#1} \par}
   \vspace{1pt}
   \hrule height 1pt
   \vspace{10pt}
 }
 
 \newcommand{\skillitem}[2]{
-  {\fontsize{9}{\singlelinespacing} 
-    \selectfont
+  {\fontsize{9}{\singlelinespacing} \selectfont
     \leftskip = \skillindent
     \sloppy
     \parindent = -20pt
     \makebox[15pt][l]{\textbullet} 
-    \textbf{#1} #2 \par}
+    \textbf{#1}{#2} \par}
   \vspace{1pt}
 }
 
 \newcommand{\employerrow}[2]{
-  {\fontsize{10}{\singlelinespacing} \selectfont \bfseries
+  {\fontsize{10}{\singlelinespacing} \selectfont 
+    \bfseries
     \hspace*{\employerindent}
-    \makebox[500pt][l]{#1\hfill #2} \par}
+    \makebox[500pt][l]{#1 \hfill{#2}} \par}
   \vspace{5pt}
 }
 
@@ -91,36 +89,37 @@
     \leftskip = \employerexperienceindent
     \sloppy
     \parindent = -20pt
-    \makebox[15pt][l]{\textbullet} #1 \par}
+    \makebox[15pt][l]{\textbullet}{#1} \par}
   \vspace{1pt}
 }
 
 \newcommand{\clientrow}[2]{
   \vspace{10pt}
-  {\fontsize{9}{\singlelinespacing} 
-    \selectfont
+  {\fontsize{9}{\singlelinespacing} \selectfont
     \hspace*{\clientindent}
     \makebox[450pt][l]{\textbf{#1} \hfill \textit{#2}} \par}
   \vspace{5pt}
 }
 
 \newcommand{\clientexperienceitem}[1]{
-  {\fontsize{8}{\singlelinespacing} 
-    \selectfont
+  {\fontsize{8}{\singlelinespacing} \selectfont
     \leftskip = \clientexperienceindent
     \sloppy
     \parindent = -20pt
-    \makebox[15pt][l]{\textbullet} #1 \par}
+    \makebox[15pt][l]{\textbullet}{#1}
+    \par}
   \vspace{1pt}
 }
 
 \newcommand{\educationrow}[3]{
-  {\fontsize{9}{\singlelinespacing} 
-    \selectfont
+  {\fontsize{9}{\singlelinespacing} \selectfont
+    \leftskip = \educationindent 
     \hspace*{\educationindent}
-    \makebox[450pt][l]{\textbf{#1} \hfill \textit{#2}} \par
+    \textbf{#1} \hfill \textit{#2}
+    \par
     \vspace{1pt}
-    \fontsize{10}{\singlelinespacing} \selectfont \hspace*{\educationindent}{#3} \par}
+    \hspace*{\educationindent}{#3} 
+    \par}
   \vspace{5pt}
 }
 
@@ -128,35 +127,31 @@
   {\fontsize{9}{\singlelinespacing} \selectfont
     \leftskip = \skillindent
     \parindent = -20pt
-    \makebox[15pt][l]{\textbullet} #1 \par}
+    \makebox[15pt][l]{\textbullet}{#1} 
+    \par}
   \vspace{1pt}
 }
 
 \begin{document}
 
-{\centering \fontsize{20}{\singlelinespacing} \selectfont \bfseries MALCOLM JOSUA GALLEGOS BAUTISTA \par}
+{\centering \fontsize{18}{\singlelinespacing} \selectfont \bfseries{MALCOLM JOSUA GALLEGOS BAUTISTA} \par}
 \vspace{5pt}
-{\centering \fontsize{11}{\singlelinespacing} \selectfont \bfseries SOFTWARE DEVELOPER ENGINEER | SPRING BOOT | MICROSERVICES | DISTRIBUTED SYSTEMS \par}
+{\centering \fontsize{10}{\singlelinespacing} \selectfont \bfseries{SOFTWARE DEVELOPER ENGINEER | SPRING BOOT | MICROSERVICES | DISTRIBUTED SYSTEMS} \par}
 \vspace{5pt}
-{\centering \fontsize{10}{\singlelinespacing} \selectfont
+{\centering \fontsize{9}{\singlelinespacing} \selectfont
   Mexico | +52 998 107 1417 | MalcolmJGB@hotmail.com | 
   LinkedIn: \href{https://www.linkedin.com/in/malcolmjgb}{\underline{MalcolmJGB}} | 
-  GitHub: \href{https://github.com/MalcolmJGB}{\underline{MalcolmJGB}} \par}
+  GitHub: \href{https://github.com/MalcolmJGB}{\underline{MalcolmJGB}} 
+  \par}
 \vspace{5pt}
-{\centering \fontsize{10}{\singlelinespacing} \selectfont Spanish (Native) | English (B2 - Professional Working Proficiency) | German (A1 - Basic) \par}
+{\centering \fontsize{9}{\singlelinespacing} \selectfont Spanish (Native) | English (B2 - Professional Working Proficiency) | German (A1 - Basic) \par}
 
 \sectiontitle{PROFESSIONAL PROFILE}
 {\fontsize{9}{\singlelinespacing} \selectfont
   \leftskip = \profileindent
-  \rightskip = 0pt
   \sloppy
-  Java Software Engineer with 6+ years of experience in technology, including 3+ years at IBM Consulting delivering Java / Spring
-  Boot solutions through client engagements for enterprise banking and insurance platforms. Contributed across system design,
-  development, modernization, automated testing, release coordination, and production support for 20+ microservices used by
-  thousands of users. Experienced with REST and SOAP APIs, Kafka-based integrations, relational databases, Kubernetes,
-  CI/CD, observability, performance analysis, and Java 8-to-17/21 upgrades. Reviews code, mentors less-experienced
-  engineers, translates requirements into technical plans, and communicates delivery risks and solutions to technical and client
-  stakeholders.\par}
+  Java Software Engineer with 6+ years of experience in technology, including 3+ years at IBM Consulting delivering Java / Spring Boot solutions through client engagements for enterprise banking and insurance platforms. Contributed across system design, development, modernization, automated testing, release coordination, and production support for 20+ microservices used by thousands of users. Experienced with REST and SOAP APIs, Kafka-based integrations, relational databases, Kubernetes, CI/CD, observability, performance analysis, and Java 8-to-17/21 upgrades. Reviews code, mentors less-experienced engineers, translates requirements into technical plans, and communicates delivery risks and solutions to technical and client stakeholders.
+  \par}
 
 \sectiontitle{CORE SKILLS}
 \skillitem{Programming: }{Java (8, 17, 21), C, SQL, Python}
@@ -193,17 +188,17 @@
 \clientexperienceitem{Accessed and updated relational data using JPA and JDBC, supporting PostgreSQL and MySQL environments.}
 \clientexperienceitem{Designed and maintained JUnit unit and integration tests and contributed to Agile planning, daily coordination, and delivery activities.}
 
-\newgeometry{left = 0.60in, right = 0.60in, top = 0.6in, bottom = 0.6in}
+\newpage
 
 \employerrow{Syntax - Virtualization and Cloud Computing Engineer}{Jan 2020 - Sep 2022}
 \employerexperienceitem{Provisioned and migrated virtual machines, installed VMware hypervisors, configured virtual networks, installed Windows/Linux operating systems, and managed partitions and storage.}
 \employerexperienceitem{Resolved high-priority infrastructure incidents through ServiceNow and served in secondary on-call coverage, strengthening operational discipline and production support skills.}
 
 \sectiontitle{EDUCATION}
-\educationrow{Tecnológico de Monterrey - B.S. in Mechatronics Engineering}{Aug 2015 - Jun 2020}{Mexico}
+\educationrow{Tecnológico de Monterrey - B.S. in Mechatronics Engineering}{Aug 2015 - Jun 2020}{México}
 
 \sectiontitle{CERTIFICATIONS}
 \certificationitem{Microsoft - Azure Fundamentals (2023)}
-\certificationitem{Cisco - Introductory (2022)}
+\certificationitem{Cisco - Introducing Cisco Unified Computing System (2022)}
 
 \end{document}
