@@ -8,73 +8,104 @@
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 
+% Font Size
+\newlength{\namefontsize}
+\newlength{\rolefontsize}
+\newlength{\clientfontsize}
+\newlength{\documentfontsize}
+\setlength{\namefontsize}{14pt}
+\setlength{\rolefontsize}{12pt}
+\setlength{\clientfontsize}{10pt}
+\setlength{\documentfontsize}{9pt}
+
+% Line Spacing
+\newlength{\singlelinespacing}
+\setlength{\singlelinespacing}{12pt}
+
+% Separation
+\newlength{\nullseparation}
+\newlength{\singleseparation}
+\newlength{\doubleseparation}
+\setlength{\nullseparation}{0pt}
+\setlength{\singleseparation}{5pt}
+\setlength{\doubleseparation}{10pt}
+
+% Indentation
+\newlength{\nullindentation}
+\newlength{\singleindentation}
+\setlength{\nullindentation}{0pt}
+\setlength{\singleindentation}{15pt}
+
 \renewcommand{\familydefault}{\sfdefault}
 \input{glyphtounicode}
 \pdfgentounicode=1
 \hypersetup{
   pdfauthor={Malcolm Josua Gallegos Bautista},
-  pdftitle={Malcolm Gallegos - Senior Java Developer - EPAM}}
+  pdftitle={Malcolm Gallegos - Software Developer Engineer}}
 \pagestyle{empty}
 \raggedright
 \raggedbottom
-\titleformat{\section}{\normalfont \small \bfseries}{}{0pt}{}[\titlerule]
-\titlespacing*{\section}{0pt}{10pt}{5pt}
+\titleformat{\section}{\normalfont \small \bfseries}{}{\nullindentation}{}[\titlerule]
+\titlespacing*{\section}{\nullindentation}{\doubleseparation}{\singleseparation}
 \setlist[itemize]{
   label=$\bullet$,
-  leftmargin=15pt,
-  topsep=5pt,
-  itemsep=2pt}
+  leftmargin=\singleindentation,
+  topsep=\singleseparation,
+  itemsep=\nullseparation}
 
 \newcommand{\role}[1]{
-  \addvspace{5pt}
-  {\fontsize{10}{12} \selectfont \bfseries #1 \par}
+  \addvspace{\singleseparation}
+  {\fontsize{\rolefontsize}{\singlelinespacing} \selectfont \bfseries #1 \par}
   \nopagebreak}
 \newcommand{\client}[1]{
-  \addvspace{10pt}
-  {\fontsize{14}{12} \selectfont #1 \par} 
+  \addvspace{\singleseparation}
+  {\fontsize{\clientfontsize}{\singlelinespacing} \selectfont #1 \par} 
   \nopagebreak}
+\newcommand{\education}[1]{
+  \addvspace{\singleseparation} 
+  {\bfseries #1}}
 \newcommand{\skill}[1]{
-  \addvspace{5pt} 
+  \addvspace{\singleseparation} 
   {\bfseries #1 \par}
   \nopagebreak}
 
 \begin{document}
-\fontsize{9}{12} \selectfont
-{\fontsize{15}{12} \selectfont \bfseries {MALCOLM JOSUA GALLEGOS BAUTISTA}} \par
-\textit{Senior Java Backend Software Engineer | Spring Boot \& Microservices | AWS} \par
+\fontsize{\documentfontsize}{\singlelinespacing} \selectfont
+{\fontsize{\namefontsize}{\singlelinespacing} \selectfont \bfseries MALCOLM JOSUA GALLEGOS BAUTISTA} \par
+\textit{Software Developer Engineer | Spring Boot \& Microservices | AWS} \par
 {+52 998 107 1417 | \href{mailto:MalcolmJGB@hotmail.com}{MalcolmJGB@hotmail.com} | \href{https://linkedin.com/in/malcolmjgb}{linkedin.com/in/malcolmjgb} | \href{https://github.com/MalcolmJGB}{github.com/MalcolmJGB}} \par
 
 \section*{PROFESSIONAL SUMMARY}
-Senior Java Backend Software Engineer with 3+ years of hands-on development at IBM Consulting and 6+ years of total technology experience. Expert in architecting and delivering distributed microservices using Spring Boot, Apache Kafka, and REST APIs for banking and insurance platforms serving thousands of users. Proven technical leadership with demonstrated mentorship of junior developers on code quality, testing practices, and architectural design. Specialist in production troubleshooting, root cause analysis (RCA), and modern DevOps practices including Kubernetes, Docker, and CI/CD pipelines. Track record of modernizing legacy systems from Java 8 to Java 17/21 while maintaining 99.9\% production uptime and zero unplanned downtime across 20+ microservices. \par
+Software Devewloper Engineer with 3+ years of hands-on development at IBM Consulting and 6+ years of total technology experience. Expert in architecting and delivering distributed microservices using Spring Boot, Apache Kafka, and REST APIs for banking and insurance platforms serving thousands of users. Proven technical leadership with demonstrated mentorship of junior developers on code quality, testing practices, and architectural design. Specialist in production troubleshooting, root cause analysis (RCA), and modern DevOps practices including Kubernetes, Docker, and CI/CD pipelines. Track record of modernizing legacy systems from Java 8 to Java 17/21 while maintaining 99.9\% production uptime and zero unplanned downtime across 20+ microservices. \par
 
 \section*{EXPERIENCE}
-\role{Senior Software Engineer - IBM Consulting}
+\role{Software Developer Engineer - IBM Consulting}
 Sep 2022 - Present \par
-\client{USAA | API Migration Platform}
-Aug 2025 - Present \par
+\client{IBM Client - USAA | API Migration Platform}
+May 2025 - Present \par
 \begin{itemize}
-\item Migrated and validated 15+ legacy APIs for platform modernization, preserving functional behavior and integration contracts; ensured zero regression through automated JUnit test suites covering 400+ test cases.
-\item Standardized API error handling and response structures across services by implementing backend migration logic in Java and Spring Boot; reduced integration incident tickets by 60\% through peer code review and quality gate enforcement.
-\item Resolved production blockers by analyzing Kubernetes pod logs and application traces in real-time; used Jenkins, GitLab CI, and Argo CD to accelerate build-deploy-validate cycles by 35\%.
-\item Mentored team members on automated testing strategies and microservices best practices during code reviews.
+  \item Migrated and validated 15+ legacy APIs for platform modernization, preserving functional behavior and integration contracts; ensured zero regression through automated JUnit test suites covering 400+ test cases.
+  \item Standardized API error handling and response structures across services by implementing backend migration logic in Java and Spring Boot; reduced integration incident tickets by 60\% through peer code review and quality gate enforcement.
+  \item Resolved production blockers by analyzing Kubernetes pod logs and application traces in real-time; used Jenkins, GitLab CI, and Argo CD to accelerate build-deploy-validate cycles by 35\%.
+  \item Mentored team members on automated testing strategies and microservices best practices during code reviews.
 \end{itemize}
-\client{Scotiabank | Business Banking Platform}
+\client{IBM Client - Scotiabank | Business Banking Platform}
 Sep 2023 - May 2025 \par
 \begin{itemize}
-\item Architected and delivered 20+ Java/Spring Boot microservices in a four-developer Agile team; services processed 10,000+ daily banking transactions for institutional clients across distributed geographic locations.
-\item Modernized nine legacy services from Java 8 to Java 17/21, refactoring codebase while preserving backward compatibility, production stability, and continuous release cadence without any unplanned rollbacks.
-\item Implemented RESTful web services, SOAP integrations, and Apache Kafka messaging to connect synchronous and asynchronous business workflows; reduced API response times by 25\% through architectural optimization and database query tuning.
-\item Investigated critical production incidents through structured root cause analysis (RCA) using Grafana, Prometheus, and Dynatrace; maintained 99.9\% application uptime across all owned services.
-\item Reduced regression risk across quarterly releases with comprehensive JUnit unit and integration test suites (85\%+ code coverage); mentored two junior developers on test-driven development (TDD), code review discipline, and pull-request best practices.
-\item Translated product requirements and user stories into technical implementation plans and effort estimates; led Agile sprint planning, velocity tracking, and cross-functional releases with Development, QA, and DevOps teams.
+  \item Architected and delivered 20+ Java/Spring Boot microservices in a four-developer Agile team; services processed 10,000+ daily banking transactions for institutional clients across distributed geographic locations.
+  \item Modernized nine legacy services from Java 8 to Java 17/21, refactoring codebase while preserving backward compatibility, production stability, and continuous release cadence without any unplanned rollbacks.
+  \item Implemented RESTful web services, SOAP integrations, and Apache Kafka messaging to connect synchronous and asynchronous business workflows; reduced API response times by 25\% through architectural optimization and database query tuning.
+  \item Investigated critical production incidents through structured root cause analysis (RCA) using Grafana, Prometheus, and Dynatrace; maintained 99.9\% application uptime across all owned services.
+  \item Reduced regression risk across quarterly releases with comprehensive JUnit unit and integration test suites (85\%+ code coverage); mentored two junior developers on test-driven development (TDD), code review discipline, and pull-request best practices.
+  \item Translated product requirements and user stories into technical implementation plans and effort estimates; led Agile sprint planning, velocity tracking, and cross-functional releases with Development, QA, and DevOps teams.
 \end{itemize}
-\client{USAA | Financial Services Backend}
+\client{IBM Client - USAA | Financial Services Backend}
 Sep 2022 - Sep 2023 \par
 \begin{itemize}
-\item Delivered eight Java 8/Spring Boot microservices supporting insurance financial processes and enterprise workflows; services handled 50,000+ monthly transactions in production environments.
-\item Connected REST APIs with event-driven processing by producing and consuming Apache Kafka events; implemented message-driven architecture supporting 10+ downstream consumer services with high-throughput requirements.
-\item Implemented data persistence with JPA and JDBC across PostgreSQL and MySQL environments, optimizing database queries to reduce response times by 30\% and improve overall system performance.
-\item Supported delivery validation with comprehensive JUnit test suites; actively participated in Agile sprint planning, estimation sessions, and daily stand-ups across distributed teams.
+  \item Delivered eight Java 8/Spring Boot microservices supporting insurance financial processes and enterprise workflows; services handled 50,000+ monthly transactions in production environments.
+  \item Connected REST APIs with event-driven processing by producing and consuming Apache Kafka events; implemented message-driven architecture supporting 10+ downstream consumer services with high-throughput requirements.
+  \item Implemented data persistence with JPA and JDBC across PostgreSQL and MySQL environments, optimizing database queries to reduce response times by 30\% and improve overall system performance.
+  \item Supported delivery validation with comprehensive JUnit test suites; actively participated in Agile sprint planning, estimation sessions, and daily stand-ups across distributed teams.
 \end{itemize}
 
 \newpage
@@ -82,18 +113,17 @@ Sep 2022 - Sep 2023 \par
 \role{Virtualization and Cloud Computing Engineer - Syntax}
 Jan 2020 - Sep 2022 \par
 \begin{itemize}
-\item Delivered virtualized infrastructure for 50+ enterprise clients by provisioning virtual machines, configuring VMware hypervisor environments, and designing virtual network architectures aligned with production requirements.
-\item Prepared and deployed Windows/Linux operating systems across 200+ servers; configured storage partitions and volume management to support mission-critical production workloads.
-\item Resolved high-priority infrastructure incidents via ServiceNow ticketing system; provided secondary on-call coverage supporting 24/7 production operations with 95\% first-contact resolution rate.
+  \item Delivered virtualized infrastructure for 50+ enterprise clients by provisioning virtual machines, configuring VMware hypervisor environments, and designing virtual network architectures aligned with production requirements.
+  \item Prepared and deployed Windows/Linux operating systems across 200+ servers; configured storage partitions and volume management to support mission-critical production workloads.
+  \item Resolved high-priority infrastructure incidents via ServiceNow ticketing system; provided secondary on-call coverage supporting 24/7 production operations with 95\% first-contact resolution rate.
 \end{itemize}
 
 \section*{EDUCATION}
-B.S. in Mechatronics Engineering \par
-Tecnológico de Monterrey | Jun 2020 \par
+\education{B.S. in Mechatronics Engineering} | Tecnológico de Monterrey | Jun 2020 \par
 
 \section*{SKILLS}
 \skill{Programming Languages}
-Java (8, 17, 21), SQL, Python, C\par
+Java (8, 17, 21), SQL, Python, C, LaTeX \par
 \skill{Backend \& Frameworks}
 Spring Boot, Microservices Architecture, RESTful Web Services (REST APIs), SOAP, Apache Kafka, JPA, JDBC, Lombok \par
 \skill{Architecture \& Design}
@@ -109,8 +139,8 @@ Agile/Scrum, Sprint Planning, Estimation, Jira, Confluence, ServiceNow, Technica
 
 \section*{CERTIFICATIONS}
 \begin{itemize}
-\item Microsoft Azure Fundamentals | 2023
-\item Cisco Introducing Cisco Unified Computing System | 2022
+  \item Microsoft Azure Fundamentals | 2023
+  \item Cisco Introducing Cisco Unified Computing System | 2022
 \end{itemize}
 
 \section*{LANGUAGES}
