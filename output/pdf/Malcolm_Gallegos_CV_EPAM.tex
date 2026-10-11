@@ -1,0 +1,151 @@
+% !TEX program = pdflatex
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=0.6in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+% Font Size
+\newlength{\namefontsize}
+\newlength{\rolefontsize}
+\newlength{\clientfontsize}
+\newlength{\documentfontsize}
+\setlength{\namefontsize}{14pt}
+\setlength{\rolefontsize}{12pt}
+\setlength{\clientfontsize}{10pt}
+\setlength{\documentfontsize}{9pt}
+
+% Line Spacing
+\newlength{\singlelinespacing}
+\setlength{\singlelinespacing}{12pt}
+
+% Separation
+\newlength{\nullseparation}
+\newlength{\singleseparation}
+\newlength{\doubleseparation}
+\setlength{\nullseparation}{0pt}
+\setlength{\singleseparation}{5pt}
+\setlength{\doubleseparation}{10pt}
+
+% Indentation
+\newlength{\nullindentation}
+\newlength{\singleindentation}
+\setlength{\nullindentation}{0pt}
+\setlength{\singleindentation}{15pt}
+
+\renewcommand{\familydefault}{\sfdefault}
+\input{glyphtounicode}
+\pdfgentounicode=1
+\hypersetup{
+  pdfauthor={Malcolm Josua Gallegos Bautista},
+  pdftitle={Malcolm Gallegos - Java Backend Developer}}
+\pagestyle{empty}
+\raggedright
+\raggedbottom
+\titleformat{\section}{\normalfont \small \bfseries}{}{\nullindentation}{}[\titlerule]
+\titlespacing*{\section}{\nullindentation}{\doubleseparation}{\singleseparation}
+\setlist[itemize]{
+  label=$\bullet$,
+  leftmargin=\singleindentation,
+  topsep=\singleseparation,
+  itemsep=\nullseparation}
+
+\newcommand{\role}[1]{
+  \vspace{\singleseparation}
+  {\fontsize{\rolefontsize}{\singlelinespacing} \selectfont \bfseries #1 \par}
+  \nopagebreak}
+\newcommand{\client}[1]{
+  \vspace{\singleseparation}
+  {\fontsize{\clientfontsize}{\singlelinespacing} \selectfont #1 \par} 
+  \nopagebreak}
+\newcommand{\education}[1]{
+  \vspace{\singleseparation} 
+  {\bfseries #1}}
+\newcommand{\skill}[1]{
+  \vspace{\singleseparation} 
+  {\bfseries #1 \par}
+  \nopagebreak}
+
+\begin{document}
+\fontsize{\documentfontsize}{\singlelinespacing} \selectfont
+{\fontsize{\namefontsize}{\singlelinespacing} \selectfont \bfseries MALCOLM JOSUA GALLEGOS BAUTISTA} \par
+\textit{Java Backend Developer | Spring Boot | REST APIs \& Microservices} \par
+{+52 998 107 1417 | \href{mailto:MalcolmJGB@hotmail.com}{MalcolmJGB@hotmail.com} | \href{https://linkedin.com/in/malcolmjgb}{linkedin.com/in/malcolmjgb} | \href{https://github.com/MalcolmJGB}{github.com/MalcolmJGB}} \par
+
+\section*{PROFESSIONAL SUMMARY}
+\vspace{\singleseparation}
+Java backend developer with 4+ years of hands-on software development at IBM Consulting and 6+ years of technology experience. Build and maintain Java/Spring Boot microservices and REST APIs for banking and insurance systems, with practical experience in MySQL, PostgreSQL, SQL query optimization, and JPA/JDBC persistence. Modernize existing services, troubleshoot production issues using logs and monitoring tools, and validate changes with JUnit unit and integration tests. Collaborate with distributed teams on API design, code reviews, estimates, and CI/CD delivery, with ownership of service reliability and maintainability. English proficiency: B2. \par
+
+\section*{EXPERIENCE}
+\role{Software Developer Engineer - IBM Consulting}
+Sep 2022 - Present \par
+\client{IBM Client - USAA | API Migration Platform}
+May 2025 - Present \par
+\begin{itemize}
+  \item Migrated and validated 15+ legacy APIs, preserving existing behavior and integration contracts; verified compatibility with automated JUnit suites covering 400+ test cases.
+  \item Implemented API migration logic in Java and Spring Boot and standardized error handling and response structures; reduced integration incident tickets by 60\% through peer code reviews and quality gates.
+  \item Diagnosed and resolved production blockers using Kubernetes pod logs and application traces; accelerated build, deployment, and validation cycles by 35\% with Jenkins, GitLab CI, and Argo CD.
+  \item Mentored team members on automated testing strategies and microservices best practices during code reviews.
+\end{itemize}
+\client{IBM Client - Scotiabank | Business Banking Platform}
+Sep 2023 - May 2025 \par
+\begin{itemize}
+  \item Designed and delivered 20+ Java/Spring Boot microservices in a four-developer Agile team, supporting 10,000+ daily banking transactions for geographically distributed institutional clients.
+  \item Modernized nine existing services from Java 8 to Java 17/21, refactoring code while preserving backward compatibility and production stability, with no unplanned rollbacks.
+  \item Developed REST APIs, SOAP integrations, and Apache Kafka messaging for synchronous and asynchronous workflows; reduced API response times by 25\% through architecture improvements and SQL query tuning.
+  \item Investigated critical production incidents through structured root cause analysis (RCA) using Grafana, Prometheus, and Dynatrace; maintained 99.9\% application uptime across all owned services.
+  \item Reduced regression risk with JUnit unit and integration tests achieving 85\%+ code coverage; mentored two junior developers on test-driven development (TDD), code reviews, and Git pull-request workflows.
+  \item Translated product requirements into technical designs, implementation plans, and effort estimates; coordinated Agile planning and feature releases with Development, QA, and DevOps teams.
+\end{itemize}
+\client{IBM Client - USAA | Financial Services Backend}
+Sep 2022 - Sep 2023 \par
+\begin{itemize}
+  \item Delivered eight Java 8/Spring Boot microservices supporting insurance financial processes and enterprise workflows; services handled 50,000+ monthly transactions in production environments.
+  \item Connected REST APIs with event-driven processing by producing and consuming Apache Kafka events; implemented message-driven architecture supporting 10+ downstream consumer services with high-throughput requirements.
+  \item Implemented relational data persistence using MySQL, PostgreSQL, JPA, and JDBC; optimized SQL queries to reduce response times by 30\%.
+  \item Supported delivery validation with comprehensive JUnit test suites; actively participated in Agile sprint planning, estimation sessions, and daily stand-ups across distributed teams.
+\end{itemize}
+
+\newpage
+
+\role{Virtualization and Cloud Computing Engineer - Syntax}
+Jan 2020 - Sep 2022 \par
+\begin{itemize}
+  \item Delivered virtualized infrastructure for 50+ enterprise clients by provisioning virtual machines, configuring VMware hypervisor environments, and designing virtual network architectures aligned with production requirements.
+  \item Prepared and deployed Windows/Linux operating systems across 200+ servers; configured storage partitions and volume management to support mission-critical production workloads.
+  \item Resolved high-priority infrastructure incidents via ServiceNow ticketing system; provided secondary on-call coverage supporting 24/7 production operations with 95\% first-contact resolution rate.
+\end{itemize}
+
+\section*{EDUCATION}
+\education{B.S. in Mechatronics Engineering} | Tecnológico de Monterrey | Jun 2020 \par
+
+\section*{SKILLS}
+\skill{Programming Languages}
+Java (8, 17, 21), SQL, Python, C, LaTeX \par
+\skill{Backend \& Frameworks}
+Spring Boot, Microservices Architecture, RESTful Web Services (REST APIs), SOAP, Apache Kafka, JPA, JDBC, Lombok \par
+\skill{Architecture \& Design}
+REST API Design, System Design, Distributed Systems, Event-Driven Architecture, SQL Query Optimization \par
+\skill{Testing \& Quality Assurance}
+JUnit, Test-Driven Development (TDD), Unit Testing, Integration Testing, Code Review, SonarQube, Postman, SoapUI \par
+\skill{Data \& Infrastructure}
+MySQL, PostgreSQL, Kubernetes, Docker, Podman, Amazon Web Services (AWS), VMware, Windows, Linux \par
+\skill{DevOps \& Delivery}
+Git, Jenkins, GitLab CI, Argo CD, CI/CD Pipelines, Grafana, Prometheus, Dynatrace, Application Support, Root Cause Analysis (RCA) \par
+\skill{Collaboration \& Process}
+Agile/Scrum, Cross-functional Collaboration, Sprint Planning, Estimation, Jira, Confluence, ServiceNow, Technical Mentoring \par
+
+\section*{CERTIFICATIONS}
+\vspace{\singleseparation}
+\begin{itemize}
+  \item Microsoft Azure Fundamentals | 2023
+  \item Cisco Introducing Cisco Unified Computing System | 2022
+\end{itemize}
+
+\section*{LANGUAGES}
+\vspace{\singleseparation}
+Spanish: Native | English: Professional Working Proficiency (B2) | German: Basic (A1) \par
+\end{document}
